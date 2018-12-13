@@ -1,1 +1,9 @@
 show.erb
+
+<h1><%= @pet.name%> is a cat</h1>
+
+<% if @pet.owner_id %>
+  ............ and <%= Owner.find(@pet.owner_id).name%> feeds me
+<% end %>
+<br>
+<a href="/pets/<%=@pet.id%>/edit">Update this Pet</a>
